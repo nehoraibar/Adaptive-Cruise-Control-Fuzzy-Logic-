@@ -9,19 +9,33 @@
 
 ## Overview
 
-This project presents the design, implementation, and simulation of an **Adaptive Cruise Control (ACC)** system using a **Zero-Order Sugeno Fuzzy Logic Controller** developed in **MATLAB**, **Simulink**, and the **Fuzzy Logic Toolbox**.
+This project implements an **Adaptive Cruise Control (ACC)** system using a **Zero-Order Sugeno Fuzzy Logic Controller** developed in **MATLAB**, **Simulink**, and the **Fuzzy Logic Toolbox**.
 
-The controller regulates an ego vehicle's longitudinal motion by maintaining a safe following distance behind a lead vehicle. Unlike traditional PID controllers, the fuzzy controller uses expert driving knowledge through linguistic rules based on **distance error** and **relative velocity**, producing smooth acceleration and braking commands under varying driving conditions.
+The controller generates acceleration commands from **distance error** and **relative velocity** measurements to maintain a safe following distance behind a lead vehicle. A nonlinear vehicle model incorporating actuator lag, aerodynamic drag, and acceleration limits was used to evaluate controller performance under realistic driving scenarios.
 
-The controller was evaluated under two different vehicle models with varying aerodynamic drag to demonstrate stability, robustness, and safe vehicle behavior.
+The controller was tested under two vehicle configurations with different aerodynamic drag coefficients, demonstrating stable speed tracking, smooth control action, and robust performance without retuning the fuzzy rule base.
 
 ---
 
+## Demo
+
+The figures below demonstrate the fuzzy controller maintaining a safe following distance while adapting to lead vehicle acceleration, braking, and re-acceleration events under two different vehicle dynamics.
+
+Key observations:
+
+- Smooth velocity tracking
+- Safe distance maintenance
+- Stable acceleration commands
+- Robust performance across different aerodynamic drag conditions
+
+---
 # System Overview
 
 <p align="center">
 <img src="images/01-system-overview.png" width="1000">
 </p>
+
+Figure 1. Simulink implementation of the Adaptive Cruise Control system showing the fuzzy controller, actuator lag, nonlinear vehicle dynamics, and closed-loop feedback architecture.
 
 The Adaptive Cruise Control system consists of:
 
@@ -34,25 +48,60 @@ The Adaptive Cruise Control system consists of:
 - Closed-Loop Feedback
 
 ---
+# How It Works
 
-# Project Highlights
+The controller continuously measures two inputs:
+
+- Distance Error
+- Relative Velocity
+
+These measurements are passed into a Zero-Order Sugeno Fuzzy Inference System.
+
+The fuzzy rule base determines an acceleration command, which is filtered through an actuator lag model before being applied to the nonlinear vehicle dynamics.
+
+The resulting vehicle motion updates the spacing and velocity measurements, closing the feedback loop.
+
+Overall signal flow:
+
+```text
+Distance Error + Relative Velocity
+                │
+                ▼
+    Sugeno Fuzzy Controller
+                │
+                ▼
+     Acceleration Command
+                │
+                ▼
+          Actuator Lag
+                │
+                ▼
+       Vehicle Dynamics
+                │
+                ▼
+ Updated Position & Velocity
+```
+---
+
+## Project Highlights
 
 - Designed a Zero-Order Sugeno Fuzzy Logic Controller
-- Built a nonlinear Adaptive Cruise Control model in Simulink
-- Implemented actuator lag and aerodynamic drag models
-- Designed custom fuzzy membership functions
 - Developed a 15-rule fuzzy inference system
-- Simulated realistic acceleration, braking, and re-acceleration events
-- Compared controller performance under multiple vehicle configurations
-- Achieved stable speed tracking with safe vehicle spacing
+- Built a nonlinear Adaptive Cruise Control model in Simulink
+- Modeled actuator lag, aerodynamic drag, and acceleration constraints
+- Simulated realistic highway driving scenarios
+- Evaluated controller performance under multiple vehicle dynamics
+- Demonstrated stable speed tracking and safe following distance
 
 ---
 
-# Software Used
+# Technologies
 
 - MATLAB
 - Simulink
 - Fuzzy Logic Toolbox
+- Sugeno Fuzzy Inference System
+- Control Systems
 
 ---
 
@@ -129,7 +178,25 @@ These rules emulate human driving behavior while minimizing oscillations and mai
 Two different vehicle configurations were simulated to evaluate controller robustness.
 
 ---
+# Results
 
+The controller was evaluated under two different vehicle models.
+
+Both simulations included:
+
+- Initial acceleration
+- Sudden braking event
+- Re-acceleration
+
+Performance metrics included:
+
+- Velocity tracking
+- Following distance
+- Controller acceleration
+- Stability
+- Overshoot
+- Settling time
+---
 # Case 1 – High Aerodynamic Drag
 
 Vehicle Parameters
@@ -217,6 +284,13 @@ Acceleration commands remain smooth and bounded while compensating for the reduc
 
 ---
 
+## Key Results
+
+- Successfully maintained safe following distance during acceleration and braking events
+- Eliminated sustained oscillations through fuzzy rule tuning
+- Demonstrated robust controller performance across different aerodynamic drag conditions
+- Achieved stable closed-loop behavior without retuning the fuzzy controller
+
 # Skills Demonstrated
 
 This project demonstrates practical experience with:
@@ -249,11 +323,11 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 │   ├── 02-distance-mf.png
 │   ├── 03-velocity-mf.png
 │   ├── 04-velocity-case1.png
-│   ├── 05-velocity_case2.png
-│   ├── 06-distance_case1.png
-│   ├── 07-distance_case2.png
-│   ├── 08-acceleration_case1.png
-│   └── 09-acceleration_case2.png
+│   ├── 05-velocity-case2.png
+│   ├── 06-distance-case1.png
+│   ├── 07-distance-case2.png
+│   ├── 08-acceleration-case1.png
+│   └── 09-acceleration-case2.png
 │
 ├── matlab/
 │   ├── ACC_Controller.slx
@@ -270,15 +344,15 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 # Running the Project
 
 1. Open MATLAB.
-2. Launch Simulink.
-3. Open **ACC_Controller.slx**.
-4. Ensure the **ACC_Fuzzy.fis** file is located in the project directory.
+2. Open the `matlab/` directory.
+3. Load `ACC_Controller.slx`.
+4. Ensure `ACC_Fuzzy.fis` is in the MATLAB path or the project directory.
 5. Run the simulation.
-6. View the generated scope outputs for velocity, distance, error, and acceleration responses.
+6. Inspect the generated scope outputs for velocity, following distance, spacing error, and controller acceleration.
 
 ---
 
-# Future Improvements
+# Future Work
 
 Potential future enhancements include:
 
@@ -299,13 +373,15 @@ A detailed technical report describing the controller design, fuzzy rule base, v
 
 ---
 
-# Author
+## Connect With Me
 
-**Nehorai Bachur**
+Thank you for taking the time to review this project.
 
-Electrical Engineering Graduate
+If you have questions about this project or would like to discuss engineering opportunities, please feel free to reach out.
 
-California State University, Northridge
+- LinkedIn: [https://www.linkedin.com/in/nehoraibachur/](https://www.linkedin.com/in/nehoraibachur/)
+- GitHub: [https://github.com/nehoraibar](https://github.com/nehoraibar)
+- Email: nehoraibar@gmail.com
 
 ---
 
