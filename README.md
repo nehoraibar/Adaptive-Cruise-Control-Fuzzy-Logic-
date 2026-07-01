@@ -1,11 +1,11 @@
 # Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
 <p align="center">
-  <img src="https://img.shields.io/badge/MATLAB-orange?style=for-the-badge&logo=mathworks">
-  <img src="https://img.shields.io/badge/Simulink-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Fuzzy%20Logic-purple?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Sugeno%20FIS-success?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Control%20Systems-red?style=for-the-badge">
-  <img src="https://img.shields.io/badge/MATLAB%20Project-Engineering-darkgreen?style=for-the-badge">
+<img src="https://img.shields.io/badge/MATLAB-orange?style=for-the-badge&logo=mathworks">
+<img src="https://img.shields.io/badge/Simulink-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Fuzzy%20Logic-8A2BE2?style=for-the-badge">
+<img src="https://img.shields.io/badge/Sugeno%20FIS-success?style=for-the-badge">
+<img src="https://img.shields.io/badge/Control%20Systems-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/Vehicle%20Dynamics-yellow?style=for-the-badge">
 </p>
 > MATLAB | Simulink | Fuzzy Logic Toolbox | Control Systems
 
@@ -42,7 +42,18 @@ The controller was tested under two vehicle configurations with different aerody
 
 ## Simulation Overview
 
-The figures below demonstrate the fuzzy controller maintaining a safe following distance while adapting to lead vehicle acceleration, braking, and re-acceleration events under two different vehicle dynamics.
+The controller was evaluated using a nonlinear vehicle model under two driving scenarios:
+
+- Initial acceleration
+- Sudden braking
+- Re-acceleration
+
+Two vehicle configurations were tested:
+
+| Case | Drag Coefficient | Max Acceleration |
+|------|-----------------|-----------------:|
+| Case 1 | 0.003 | 3.0 m/s² |
+| Case 2 | 0.0004 | 2.5 m/s² |
 
 Key observations:
 
@@ -50,7 +61,6 @@ Key observations:
 - Safe distance maintenance
 - Stable acceleration commands
 - Robust performance across different aerodynamic drag conditions
-
 ---
 ## System Overview
 
