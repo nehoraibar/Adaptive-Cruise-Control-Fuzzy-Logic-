@@ -2,12 +2,8 @@
 # Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MATLAB-orange?style=for-the-badge&logo=mathworks" />
-  <img src="https://img.shields.io/badge/Simulink-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Fuzzy%20Logic-8A2BE2?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Sugeno%20FIS-success?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Control%20Systems-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Vehicle%20Dynamics-yellow?style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/nehoraibar/Adaptive-Cruise-Control-Fuzzy-Logic?style=for-the-badge">
+  <img src="https://img.shields.io/github/last-commit/nehoraibar/Adaptive-Cruise-Control-Fuzzy-Logic?style=for-the-badge">
 </p>
 > MATLAB | Simulink | Fuzzy Logic Toolbox | Control Systems
 
