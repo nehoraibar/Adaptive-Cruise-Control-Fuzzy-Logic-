@@ -187,7 +187,7 @@ The reduced aerodynamic drag results in faster acceleration and slightly larger 
 ### Distance Response
 
 <p align="center">
-<img src="images/07-distance_case2.png" width="850">
+<img src="images/07-distance-case2.png" width="850">
 </p>
 
 Although the system experiences larger spacing variations, the controller successfully prevents unsafe following distances.
