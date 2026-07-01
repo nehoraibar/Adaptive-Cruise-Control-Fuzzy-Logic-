@@ -1,0 +1,57 @@
+[System]
+Name='ACC_Fuzzy'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=15
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='DistError'
+Range=[-35 200]
+NumMFs=5
+MF1='VeryClose':'zmf',[5 20]
+MF2='Close':'gaussmf',[8 25]
+MF3='Safe':'gaussmf',[10 30]
+MF4='Far':'gaussmf',[15 55]
+MF5='VeryFar':'smf',[65 100]
+
+[Input2]
+Name='RelVelocity'
+Range=[-35 35]
+NumMFs=3
+MF1='Approaching':'trimf',[-35 -15 0]
+MF2='Stable':'trimf',[-10 0 10]
+MF3='MovingAway':'trimf',[0 15 35]
+
+[Output1]
+Name='Acceleration'
+Range=[-5 3]
+NumMFs=5
+MF1='BrakeHard':'constant',[-4]
+MF2='BrakeLight':'constant',[-0.8]
+MF3='Maintain':'constant',[0]
+MF4='AccelLight':'constant',[0.5]
+MF5='AccelHard':'constant',[3]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 3 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1
+4 1, 3 (1) : 1
+4 2, 4 (1) : 1
+4 3, 5 (1) : 1
+5 1, 4 (1) : 1
+5 2, 5 (1) : 1
+5 3, 5 (1) : 1
