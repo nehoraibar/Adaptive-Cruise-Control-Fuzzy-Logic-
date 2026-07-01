@@ -36,7 +36,7 @@ Key observations:
 <img src="images/01-system-overview.png" width="1000">
 </p>
 
-Figure 1. Simulink implementation of the Adaptive Cruise Control system showing the fuzzy controller, actuator lag, nonlinear vehicle dynamics, and closed-loop feedback architecture.
+**Figure 1.** Simulink implementation of the Adaptive Cruise Control system showing the fuzzy controller, actuator lag, nonlinear vehicle dynamics, and closed-loop feedback architecture.
 
 The Adaptive Cruise Control system consists of:
 
