@@ -1,11 +1,13 @@
 # Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
-![MATLAB](https://img.shields.io/badge/MATLAB-R2024b-orange)
+# Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
 
-![Simulink](https://img.shields.io/badge/Simulink-Model-blue)
-
-![Fuzzy Logic](https://img.shields.io/badge/Fuzzy-Logic-green)
-
-![Control Systems](https://img.shields.io/badge/Control-Systems-red)
+<p align="center">
+  <img src="https://img.shields.io/badge/MATLAB-R2024b-orange?style=for-the-badge&logo=mathworks" />
+  <img src="https://img.shields.io/badge/Simulink-Model-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Fuzzy-Logic-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Control-Systems-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Vehicle-Dynamics-red?style=for-the-badge" />
+</p>
 > MATLAB | Simulink | Fuzzy Logic Toolbox | Control Systems
 
 A MATLAB/Simulink implementation of an Adaptive Cruise Control (ACC) system using a Zero-Order Sugeno Fuzzy Inference System. The controller maintains a safe following distance by generating acceleration commands from relative velocity and distance error while accounting for nonlinear vehicle dynamics and actuator lag.
