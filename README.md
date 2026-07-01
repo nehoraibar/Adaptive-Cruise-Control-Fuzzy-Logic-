@@ -1,10 +1,14 @@
 # Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
+![MATLAB](https://img.shields.io/badge/MATLAB-R2024b-orange)
 
-![MATLAB](https://img.shields.io/badge/MATLAB-R2024b-orange?logo=Mathworks&logoColor=white)
-![Simulink](https://img.shields.io/badge/Simulink-Modeling-blue)
-![Fuzzy Logic](https://img.shields.io/badge/Fuzzy-Sugeno-success)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![Simulink](https://img.shields.io/badge/Simulink-Model-blue)
+
+![Fuzzy Logic](https://img.shields.io/badge/Fuzzy-Logic-green)
+
+![Control Systems](https://img.shields.io/badge/Control-Systems-red)
+> MATLAB | Simulink | Fuzzy Logic Toolbox | Control Systems
+
+A MATLAB/Simulink implementation of an Adaptive Cruise Control (ACC) system using a Zero-Order Sugeno Fuzzy Inference System. The controller maintains a safe following distance by generating acceleration commands from relative velocity and distance error while accounting for nonlinear vehicle dynamics and actuator lag.
 
 ---
 
@@ -18,7 +22,7 @@ The controller was tested under two vehicle configurations with different aerody
 
 ---
 
-## Demo
+## Simulation Overview
 
 The figures below demonstrate the fuzzy controller maintaining a safe following distance while adapting to lead vehicle acceleration, braking, and re-acceleration events under two different vehicle dynamics.
 
@@ -51,14 +55,12 @@ The Adaptive Cruise Control system consists of:
 ---
 # How It Works
 
-The controller continuously measures two inputs:
+The controller computes acceleration commands using:
 
-- Distance Error
-- Relative Velocity
+• Distance Error
+• Relative Velocity
 
-These measurements are passed into a Zero-Order Sugeno Fuzzy Inference System.
-
-The fuzzy rule base determines an acceleration command, which is filtered through an actuator lag model before being applied to the nonlinear vehicle dynamics.
+These inputs are evaluated by a 15-rule Zero-Order Sugeno FIS whose output is filtered through a first-order actuator model before driving the nonlinear vehicle dynamics.
 
 The resulting vehicle motion updates the spacing and velocity measurements, closing the feedback loop.
 
@@ -96,13 +98,16 @@ Distance Error + Relative Velocity
 
 ---
 
-# Technologies
+  ## Tools & Skills
 
 - MATLAB
 - Simulink
 - Fuzzy Logic Toolbox
-- Sugeno Fuzzy Inference System
+- Sugeno FIS
 - Control Systems
+- Dynamic System Modeling
+- Vehicle Dynamics
+- Closed-Loop Control
 
 ---
 
