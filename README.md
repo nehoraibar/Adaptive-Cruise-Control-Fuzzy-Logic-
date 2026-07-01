@@ -150,7 +150,7 @@ The controller smoothly tracks the lead vehicle while maintaining stable behavio
 ### Distance Response
 
 <p align="center">
-<img src="images/06-distance_case1.png" width="850">
+<img src="images/06-distance-case1.png" width="850">
 </p>
 
 The controller maintains a safe following distance throughout acceleration, braking, and re-acceleration events.
@@ -160,7 +160,7 @@ The controller maintains a safe following distance throughout acceleration, brak
 ### Acceleration Response
 
 <p align="center">
-<img src="images/08-acceleration_case1.png" width="850">
+<img src="images/08-acceleration-case1.png" width="850">
 </p>
 
 The controller generates realistic acceleration and braking commands while respecting actuator limits.
@@ -177,7 +177,7 @@ Vehicle Parameters
 ### Velocity Response
 
 <p align="center">
-<img src="images/05-velocity_case2.png" width="850">
+<img src="images/05-velocity-case2.png" width="850">
 </p>
 
 The reduced aerodynamic drag results in faster acceleration and slightly larger overshoot while maintaining overall stability.
@@ -197,7 +197,7 @@ Although the system experiences larger spacing variations, the controller succes
 ### Acceleration Response
 
 <p align="center">
-<img src="images/09-acceleration_case2.png" width="850">
+<img src="images/09-acceleration-case2.png" width="850">
 </p>
 
 Acceleration commands remain smooth and bounded while compensating for the reduced aerodynamic damping.
