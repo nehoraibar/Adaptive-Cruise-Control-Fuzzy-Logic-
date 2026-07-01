@@ -1,6 +1,4 @@
 # Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
-# Adaptive Cruise Control (ACC) Using Sugeno Fuzzy Logic
-
 <p align="center">
   <img src="https://img.shields.io/badge/MATLAB-orange?style=for-the-badge&logo=mathworks">
   <img src="https://img.shields.io/badge/Simulink-blue?style=for-the-badge">
