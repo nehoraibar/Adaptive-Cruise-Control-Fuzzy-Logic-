@@ -12,6 +12,23 @@
 A MATLAB/Simulink implementation of an Adaptive Cruise Control (ACC) system using a Zero-Order Sugeno Fuzzy Inference System. The controller maintains a safe following distance by generating acceleration commands from relative velocity and distance error while accounting for nonlinear vehicle dynamics and actuator lag.
 
 ---
+## Table of Contents
+
+- Overview
+- System Overview
+- How It Works
+- Project Highlights
+- Tools & Skills
+- Controller Inputs
+- Controller Output
+- Fuzzy Rule Base
+- Simulation Results
+- Performance Comparison
+- Running the Project
+- Future Work
+- Report
+
+---
 
 ## Overview
 
@@ -35,7 +52,7 @@ Key observations:
 - Robust performance across different aerodynamic drag conditions
 
 ---
-# System Overview
+## System Overview
 
 <p align="center">
 <img src="images/01-system-overview.png" width="1000">
@@ -54,7 +71,7 @@ The Adaptive Cruise Control system consists of:
 - Closed-Loop Feedback
 
 ---
-# How It Works
+## How It Works
 
 The controller computes acceleration commands using:
 
@@ -99,7 +116,7 @@ Distance Error + Relative Velocity
 
 ---
 
-  ## Tools & Skills
+## Tools & Skills
 
 - MATLAB
 - Simulink
@@ -112,7 +129,7 @@ Distance Error + Relative Velocity
 
 ---
 
-# Controller Inputs
+## Controller Inputs
 
 The fuzzy controller uses two input variables.
 
@@ -150,7 +167,7 @@ Membership Functions:
 
 ---
 
-# Controller Output
+## Controller Output
 
 The Sugeno controller outputs one of five acceleration commands.
 
@@ -164,7 +181,7 @@ The Sugeno controller outputs one of five acceleration commands.
 
 ---
 
-# Fuzzy Rule Base
+## Fuzzy Rule Base
 
 The controller consists of **15 expert driving rules** that determine throttle and braking behavior based on distance error and relative velocity.
 
@@ -180,12 +197,12 @@ These rules emulate human driving behavior while minimizing oscillations and mai
 
 ---
 
-# Simulation Scenarios
+## Simulation Scenarios
 
 Two different vehicle configurations were simulated to evaluate controller robustness.
 
 ---
-# Results
+## Results
 
 The controller was evaluated under two different vehicle models.
 
@@ -204,7 +221,7 @@ Performance metrics included:
 - Overshoot
 - Settling time
 ---
-# Case 1 – High Aerodynamic Drag
+## Case 1 – High Aerodynamic Drag
 
 Vehicle Parameters
 
@@ -241,7 +258,7 @@ The controller generates realistic acceleration and braking commands while respe
 
 ---
 
-# Case 2 – Low Aerodynamic Drag
+## Case 2 – Low Aerodynamic Drag
 
 Vehicle Parameters
 
@@ -278,7 +295,7 @@ Acceleration commands remain smooth and bounded while compensating for the reduc
 
 ---
 
-# Performance Comparison
+## Performance Comparison
 
 | Performance Metric | Case 1 | Case 2 |
 |--------------------|--------|--------|
@@ -298,7 +315,7 @@ Acceleration commands remain smooth and bounded while compensating for the reduc
 - Demonstrated robust controller performance across different aerodynamic drag conditions
 - Achieved stable closed-loop behavior without retuning the fuzzy controller
 
-# Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates practical experience with:
 
@@ -317,7 +334,7 @@ This project demonstrates practical experience with:
 
 ---
 
-# Repository Structure
+## Repository Structure
 
 ```
 Adaptive-Cruise-Control-Fuzzy-Logic/
@@ -348,7 +365,7 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 
 ---
 
-# Running the Project
+## Running the Project
 
 1. Open MATLAB.
 2. Open the `matlab/` directory.
@@ -359,7 +376,7 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 
 ---
 
-# Future Work
+## Future Work
 
 Potential future enhancements include:
 
@@ -374,7 +391,7 @@ Potential future enhancements include:
 
 ---
 
-# Report
+## Report
 
 A detailed technical report describing the controller design, fuzzy rule base, vehicle model, simulation setup, and performance evaluation is included in the **report/** directory.
 
@@ -389,9 +406,3 @@ If you have questions about this project or would like to discuss engineering op
 - LinkedIn: [https://www.linkedin.com/in/nehoraibachur/](https://www.linkedin.com/in/nehoraibachur/)
 - GitHub: [https://github.com/nehoraibar](https://github.com/nehoraibar)
 - Email: nehoraibar@gmail.com
-
----
-
-## License
-
-This project is licensed under the MIT License.
