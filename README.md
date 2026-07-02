@@ -351,7 +351,6 @@ This project demonstrates practical experience with:
 Adaptive-Cruise-Control-Fuzzy-Logic/
 │
 ├── README.md
-├── LICENSE
 │
 ├── images/
 │   ├── 01-system-overview.png
@@ -365,13 +364,10 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 │   └── 09-acceleration-case2.png
 │
 ├── matlab/
-│   ├── ACC_Controller.slx
+│   ├── simulink_model.slx
 │   ├── ACC_Fuzzy.fis
-│   ├── createFIS.m
-│   └── runSimulation.m
-│
-└── report/
-    └── Adaptive_Cruise_Control_Report.pdf
+│   ├── README.md
+└── 
 ```
 
 ---
@@ -380,7 +376,7 @@ Adaptive-Cruise-Control-Fuzzy-Logic/
 
 1. Open MATLAB.
 2. Open the `matlab/` directory.
-3. Load `ACC_Controller.slx`.
+3. Load `simulink_model.slx`.
 4. Ensure `ACC_Fuzzy.fis` is in the MATLAB path or the project directory.
 5. Run the simulation.
 6. Inspect the generated scope outputs for velocity, following distance, spacing error, and controller acceleration.
