@@ -401,12 +401,6 @@ Potential future enhancements include:
 
 ---
 
-## Report
-
-A detailed technical report describing the controller design, fuzzy rule base, vehicle model, simulation setup, and performance evaluation is included in the **report/** directory.
-
----
-
 ## Connect With Me
 
 Thank you for taking the time to review this project.
