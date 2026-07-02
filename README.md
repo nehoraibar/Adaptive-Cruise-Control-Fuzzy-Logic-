@@ -39,6 +39,17 @@ The controller generates acceleration commands from **distance error** and **rel
 The controller was tested under two vehicle configurations with different aerodynamic drag coefficients, demonstrating stable speed tracking, smooth control action, and robust performance without retuning the fuzzy rule base.
 
 ---
+## Key Features
+
+- Zero-Order Sugeno Fuzzy Logic Controller
+- 15-rule expert driving rule base
+- Nonlinear vehicle dynamics
+- MATLAB & Simulink implementation
+- Aerodynamic drag modeling
+- First-order actuator dynamics
+- Closed-loop adaptive cruise control
+- Two vehicle dynamics case studies
+
 
 ## Simulation Overview
 
@@ -127,7 +138,7 @@ Distance Error + Relative Velocity
 
 ---
 
-## Tools & Skills
+## Technologies Used
 
 - MATLAB
 - Simulink
@@ -400,9 +411,7 @@ Potential future enhancements include:
 
 ## Connect With Me
 
-Thank you for taking the time to review this project.
-
-If you have questions about this project or would like to discuss engineering opportunities, please feel free to reach out.
+If you'd like to discuss this project or engineering opportunities, feel free to reach out.
 
 - LinkedIn: [https://www.linkedin.com/in/nehoraibachur/](https://www.linkedin.com/in/nehoraibachur/)
 - GitHub: [https://github.com/nehoraibar](https://github.com/nehoraibar)
