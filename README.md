@@ -51,9 +51,10 @@ The controller was evaluated using a nonlinear vehicle model under two driving s
 Two vehicle configurations were tested:
 
 | Case | Drag Coefficient | Max Acceleration |
-|------|-----------------|-----------------:|
+|------|-----------------:|-----------------:|
 | Case 1 | 0.003 | 3.0 m/s² |
 | Case 2 | 0.0004 | 2.5 m/s² |
+
 
 Key observations:
 
